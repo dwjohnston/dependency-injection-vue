@@ -1,6 +1,8 @@
 <template>
   <div>
     <h2>Todos Example 1</h2>
+    <p>Direct module use</p>
+
     <ul>
       <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
     </ul>

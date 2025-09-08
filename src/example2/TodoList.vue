@@ -1,6 +1,8 @@
 <template>
   <div>
     <h2>Todos Example 2</h2>
+    <p>Injection via vue's native method</p>
+
     <ul>
       <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
     </ul>

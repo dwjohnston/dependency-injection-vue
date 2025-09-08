@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h2>Todos Example 2</h2>
+    <h2>Todos Example 3</h2>
+    <p>Injection via tsyringe</p>
     <ul>
       <li v-for="todo in todos" :key="todo.id">{{ todo.text }}</li>
     </ul>

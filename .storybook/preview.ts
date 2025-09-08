@@ -1,4 +1,5 @@
 import type { Preview } from '@storybook/vue3-vite'
+import "reflect-metadata";
 
 const preview: Preview = {
   parameters: {

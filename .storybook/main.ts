@@ -1,5 +1,5 @@
 import type { StorybookConfig } from '@storybook/vue3-vite';
-
+import "reflect-metadata";
 const config: StorybookConfig = {
   "stories": [
     "../src/**/*.mdx",
