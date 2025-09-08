@@ -5,6 +5,7 @@ import { fn } from 'storybook/test';
 import TodoList from './TodoList.vue';
 import { provide } from 'vue';
 import { getTodos } from '@/services/getTodos';
+import { getTodosKey } from '@/injectionKeys';
 
 const meta = {
   component: TodoList,
@@ -13,8 +14,7 @@ const meta = {
       render: (args) => ({
         components: {TodoList},
         setup() {
-               provide("getTodos", getTodos )
-
+               provide(getTodosKey, getTodos )
                return {}
         },
 

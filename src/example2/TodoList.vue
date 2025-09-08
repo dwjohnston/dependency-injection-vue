@@ -8,15 +8,19 @@
 </template>
 
 <script setup lang="ts">
+import { getTodosKey } from '@/injectionKeys';
 import { type  Todo } from '@/services/getTodos'
 import { inject, onMounted, ref } from 'vue'
 
-const getTodos = inject('getTodos')
+const getTodos = inject(getTodosKey)
 const todos = ref<Array<Todo>>([]);
 
 onMounted(async () => {
-    const gottenTodos = await getTodos(); 
-    todos.value = gottenTodos;
+    if(getTodos){
+        const gottenTodos = await getTodos(); 
+        todos.value = gottenTodos;
+    }
+
 }); 
 
 </script>

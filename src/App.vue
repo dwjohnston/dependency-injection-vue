@@ -8,9 +8,10 @@ import TodoList3 from './example3/TodoList.vue';
 import { getTodos } from "./services/getTodos";
 import { container } from "tsyringe";
 import { ProductionTodoService, TodoService } from "./example3/Todo.service";
+import { getTodosKey } from "./injectionKeys";
 
-// Native vue inejction
-provide("getTodos", getTodos )
+// Native vue injection
+provide(getTodosKey, getTodos )
 
 // injection via tsyringe
 container.register(TodoService, ProductionTodoService);
