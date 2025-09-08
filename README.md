@@ -1,39 +1,16 @@
-# vue-boilerplate
+Demonstrates three different ways of defining dependency behaviour in different consuming contexts for a vue component. 
 
-This template should help get you started developing with Vue 3 in Vite.
 
-## Recommended IDE Setup
+Example 1 - 
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Direct module calls. Uses vi.mock to define the behaviour. 
 
-## Type Support for `.vue` Imports in TS
+The problem with this is that this works for vitest only, it won't work for storybook. 
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Example 2 - 
 
-## Customize configuration
+Inject via vue's native dependency injection mechanism. 
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Example 3 - 
 
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
+Inject via tsyringe DI framework. 
